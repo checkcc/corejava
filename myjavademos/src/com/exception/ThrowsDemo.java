@@ -5,7 +5,7 @@ public class ThrowsDemo {
 	static void validate(int age) throws ArithmeticException {
 
 		if (age < 18) {
-			throw new ArithmeticException(" not valid");
+			throw  new ArithmeticException(" not valid"); //create an object using throw  rethrow
 		}
 
 	}
@@ -16,7 +16,7 @@ public class ThrowsDemo {
 			validate(12);  //caller
 		} catch (Exception e) {
 
-			System.out.println("  handled  here");
+			System.out.println("  handled  here and not validate");
 		}
 	}
 

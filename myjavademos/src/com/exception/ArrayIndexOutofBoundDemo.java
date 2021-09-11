@@ -1,7 +1,7 @@
 package com.exception;
 
 //handle by java
-public class ArrayIndexOutofBoundDemo {
+public class ArrayIndexOutOfboundDemo {
 
 	public static void main(String ar[]) {
 
