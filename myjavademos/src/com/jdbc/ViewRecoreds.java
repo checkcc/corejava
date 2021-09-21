@@ -28,14 +28,13 @@ public class ViewRecoreds {
 
 			// for retrieve we use resultset
 
-			selectsql = "select * from CUSTOMER ";
+			selectsql = "select * from emp130 ";
 
 			ResultSet rs = statement.executeQuery(selectsql);
 
 			while (rs.next()) {
 				System.out.print("ID is: " + rs.getInt("id"));
-				System.out.print("age is: " + rs.getString("age"));
-				System.out.print("addres: is " + rs.getString("address"));
+				System.out.print("name is: " + rs.getString("name"));
 				System.out.print("salary is : " + rs.getString("salary"));
 
 			}
