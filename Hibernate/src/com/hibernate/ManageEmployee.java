@@ -1,75 +1,54 @@
 package com.hibernate;
 
-
- 
-import org.hibernate.HibernateException; 
-import org.hibernate.Session; 
-import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
+import java.util.ArrayList;
+import java.util.List;
+import com.hibernate.service.EmployeeService;
 
 public class ManageEmployee {
 
-	
-	   static SessionFactory sessionFactoryObj;
-	   static Session sessionObj;
-	 
-	    private static SessionFactory buildSessionFactory() {
-	        // Creating Configuration Instance & Passing Hibernate Configuration File
-	        Configuration configObj = new Configuration();
-	        configObj.configure("hibernate.cfg.xml");
-	 
-	        // Since Hibernate Version 4.x, ServiceRegistry Is Being Used
-	        ServiceRegistry serviceRegistryObj = new StandardServiceRegistryBuilder().applySettings(configObj.getProperties()).build(); 
-	 
-	        // Creating Hibernate SessionFactory Instance
-	        sessionFactoryObj = configObj.buildSessionFactory(serviceRegistryObj);
-	        return sessionFactoryObj;
-	    }
-	
-	
-	
-   public static void main(String[] args) {
+	public static void main(String[] args) {
 
-      try {
-    	   sessionObj = buildSessionFactory().openSession();
-           sessionObj.beginTransaction();
+		EmployeeService employeeService = new EmployeeService();
 
-      } catch (Exception me) { 
-         System.err.println("Failed to create sessionFactory object." + me);
-         
-      }
-      
-      ManageEmployee ME = new ManageEmployee();
+		/* Add few employee records in database */
+		Integer empID1 = employeeService.addEmployee("anshul", "kumar", 1000);// asssinged values from here
+		Integer empID2 = employeeService.addEmployee("ankit1", "kumar", 50000);// asssinged values from here
 
-      /* Add few employee records in database */
-      Integer empID1 = ME.addEmployee("anshul", "kumar", 1000);//asssinged values from here
-      Integer empID2 = ME.addEmployee("ankit1", "kumar", 50000);//asssinged values from here
+		List<Integer> listinfo = new ArrayList<Integer>();
 
+		listinfo.add(empID1);
+		listinfo.add(empID2);
 
-   }
-   
-   /* Method to CREATE an employee in the database   business logic*/
-   public Integer addEmployee(String fname, String lname, int salary){
-     sessionObj = sessionFactoryObj.openSession();
-      Transaction tx = null;
-      Integer employeeID = null;
-      
-      try {
-         tx = sessionObj.beginTransaction();
-         Employee employee = new Employee(fname, lname, salary);//created the object of employee class
-         employeeID = (Integer) sessionObj.save(employee); //save the object or insert the recording
-       
-         tx.commit();//explictiy call  the commit esure that auto commite should be false
-      } catch (HibernateException e) {
-         if (tx!=null) tx.rollback();
-         e.printStackTrace(); 
-      } finally {
-    	  sessionObj.close(); 
-      }
-      return employeeID;
-   }
-   
+		if (listinfo.size() != 0) {
+			System.out.println("*************************************Inserted******************************");
+		} else {
+			System.out.println("##############not Inserted########################");
+
+		}
+
+		/* list employee records in database */
+		try {
+			employeeService.ListAllEmployee();
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		/* update employee records in database */
+		try {
+		employeeService.updateEmployeeDetails(1, 555);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		
+		/* delete employee records in database by id */
+		try {
+		employeeService.deleteEmployeeDetailsById(1, 555);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
+
 }
