@@ -20,5 +20,18 @@
 	</bean>
 
 
+	<bean id="stud" class="com.spring.Student">
+
+	</bean>
+
+
+
+	<bean id="add" class="com.spring.Address">
+
+	</bean>
+	
+	<bean id="cour" class="com.spring.Course">
+
+	</bean>
 
 </beans>

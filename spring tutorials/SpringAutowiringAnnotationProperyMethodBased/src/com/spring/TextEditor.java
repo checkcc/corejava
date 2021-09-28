@@ -4,27 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class TextEditor {
 
-	// Spring @Autowired Annotation and @Qualifier Bean autowiring by protperty mode
+	// Spring @Autowired Annotation and @Qualifier Bean autowiring by property mode
 
 	@Autowired
-	public SpellChecker spellChecker; /// created the reference of another class "SpellChecker"
+	SpellChecker spellChecker;
 
-	public TextEditor() {
+	void myTextEditor() {
 
-		System.out.println(" Construtor from TextEditor ");
-	}
-
-	public SpellChecker getSpellChecker() {
-		return spellChecker;
-	}
-
-	public void setSpellChecker(SpellChecker spellChecker) {
-		this.spellChecker = spellChecker;
-	}
-
-	public void SpellChk() {
-
-		spellChecker.SpellCheckerMy(); // HAS- A Relationship
+		spellChecker.ankit();
 
 	}
 

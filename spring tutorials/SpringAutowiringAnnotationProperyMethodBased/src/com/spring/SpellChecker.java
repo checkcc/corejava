@@ -2,18 +2,18 @@ package com.spring;
 
 public class SpellChecker {
 
-	// constructor
-	public SpellChecker() {
+	private String name;
 
-		System.out.println(" from  speill check constructor");
+	public String getName() {
+		return name;
 	}
 
-	// method of spell checker class
-
-	public void SpellCheckerMy() {
-
-		System.out.println(" from  speill check SpellCheckerMy() method");
-
+	public void setName(String name) {
+		this.name = name;
 	}
 
+	void ankit() {
+
+		System.out.println(" from spell check..ankit calling");
+	}
 }
