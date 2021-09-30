@@ -6,6 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="product")
@@ -14,16 +19,31 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@NotEmpty
 	@Column(name="id")
 	private long id;
+	
+	
+	@NotNull
 	@Column(name="category")
 	private String category;
+	
+	
+	@NotNull
 	@Column(name="description")
 	private String description;
+	
+	@NotBlank
 	@Column(name="manufacturer")
 	private String manufacturer;
+	
+
+	@NotBlank
 	@Column(name="name")
 	private String name;
+	
+	
+	@NotNull
 	@Column(name="unit")
 	private String unit;
 
