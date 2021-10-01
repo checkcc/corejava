@@ -1,6 +1,7 @@
 package com.demo.service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import com.demo.model.Product;
 
@@ -19,7 +20,7 @@ public interface ProductService {
 
 	// view of particular Product by id
 
-	void viewProductById(long id);
+     Optional<Product> getProductById(long id);
 
 	// update of particular Product by id
 

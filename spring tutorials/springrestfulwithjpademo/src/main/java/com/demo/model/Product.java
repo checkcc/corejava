@@ -9,7 +9,9 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 @Entity
@@ -37,9 +39,11 @@ public class Product {
 	@Column(name="manufacturer")
 	private String manufacturer;
 	
-
+    @JsonFormat
 	@NotBlank
-	@Column(name="name")
+	@NotNull
+	@Size(min = 10, max =100)
+	@Column(length = 255 )
 	private String name;
 	
 	
