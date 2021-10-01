@@ -1,0 +1,76 @@
+                                                           priority queue
+
+1. Write a Java program to create a new priority queue, add some colors (string) and print out the elements of the priority queue. 
+
+
+2. Write a Java program to iterate through all elements in priority queue. 
+
+
+3. Write a Java program to add all the elements of a priority queue to another priority queue. 
+
+
+4. Write a Java program to insert a given element into a priority queue. 
+
+
+5. Write a Java program to remove all the elements from a priority queue. 
+
+
+6. Write a Java program to count the number of elements in a priority queue. 
+
+
+7. Write a Java program to compare two priority queues. 
+
+
+                                       HashMap
+
+1. Write a Java program to associate the specified value with the specified key in a HashMap. 
+
+
+2. Write a Java program to count the number of key-value (size) mappings in a map. 
+
+
+3. Write a Java program to copy all of the mappings from the specified map to another map. 
+
+
+4. Write a Java program to remove all of the mappings from a map. 
+
+
+5. Write a Java program to check whether a map contains key-value mappings (empty) or not. 
+
+
+6. Write a Java program to get a shallow copy of a HashMap instance. 
+
+
+7. Write a Java program to test if a map contains a mapping for the specified key. 
+
+
+8. Write a Java program to test if a map contains a mapping for the specified value. 
+
+
+9. Write a Java program to create a set view of the mappings contained in a map. 
+  
+  
+                              Tree map
+
+1. Write a Java program to associate the specified value with the specified key in a Tree Map. 
+
+
+2. Write a Java program to copy a Tree Map content to another Tree Map. 
+
+
+3. Write a Java program to search a key in a Tree Map. 
+
+
+4. Write a Java program to search a value in a Tree Map. 
+
+
+5. Write a Java program to get all keys from the given a Tree Map. 
+
+
+6. Write a Java program to delete all elements from a given Tree Map. 
+
+
+7. Write a Java program to sort keys in Tree Map by using comparator. 
+
+
+8. Write a Java program to get a key-value mapping associated with the greatest key and the least key in a map. G
