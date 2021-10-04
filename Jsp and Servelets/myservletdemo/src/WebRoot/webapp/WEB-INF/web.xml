@@ -22,5 +22,21 @@
 <servlet-name>MySecondServlet</servlet-name>
 <url-pattern>/mysecondurl</url-pattern>
 </servlet-mapping>
+
+
+<servlet>
+<servlet-name>MyLoginServelet</servlet-name>
+<servlet-class>com.demo.MyLoginServelet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>MyLoginServelet</servlet-name>
+<url-pattern>/loginurl</url-pattern>
+</servlet-mapping>
+
+
+
+
 	
 </web-app>

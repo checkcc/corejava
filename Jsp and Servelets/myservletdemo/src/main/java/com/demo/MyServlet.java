@@ -18,6 +18,12 @@ public class MyServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		PrintWriter out = response.getWriter(); // io package
+		
+		int a=10;
+		int b=20;
+		int c=a+b;
+		//jdbc
+		
 
 		out.print("<html>");
 		out.print("<body bgcolor='pink'");
@@ -25,6 +31,8 @@ public class MyServlet extends HttpServlet {
 	     String name="Joyti";
 		
 		out.print("<h1>hello world , my name is </h1>"+name);
+		
+		out.print("<h1>Sum of two numis </h1>"+c);
 
 	
 		out.print("</body");
