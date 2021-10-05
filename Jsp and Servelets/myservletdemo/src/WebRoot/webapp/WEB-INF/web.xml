@@ -25,16 +25,90 @@
 
 
 <servlet>
-<servlet-name>MyLoginServelet</servlet-name>
-<servlet-class>com.demo.MyLoginServelet</servlet-class>
+<servlet-name>MyLoginServlet</servlet-name>
+<servlet-class>com.demo.MyLoginServlet</servlet-class>
+
+<init-Param>
+
+<param-name>username</param-name>
+<param-value>ram</param-value>
+</init-Param>
+
+
+
+<init-Param>
+<param-name>pwd</param-name>
+<param-value>ram</param-value>
+
+</init-Param>
 </servlet>
 
 
 <servlet-mapping>
-<servlet-name>MyLoginServelet</servlet-name>
+<servlet-name>MyLoginServlet</servlet-name>
 <url-pattern>/loginurl</url-pattern>
 </servlet-mapping>
 
+
+
+
+
+
+
+
+
+
+
+
+<servlet>
+<servlet-name>Forwardsevlet</servlet-name>
+<servlet-class>com.demo.Forwardsevlet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>Forwardsevlet</servlet-name>
+<url-pattern>/forwardsevlet</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>Includesevlet</servlet-name>
+<servlet-class>com.demo.Includesevlet</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>Includesevlet</servlet-name>
+<url-pattern>/includeurl</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>HttpSessionServlet1</servlet-name>
+<servlet-class>com.demo.HttpSessionServlet1</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>HttpSessionServlet1</servlet-name>
+<url-pattern>/httpSessionServlet1</url-pattern>
+</servlet-mapping>
+
+
+
+
+<servlet>
+<servlet-name>HttpSessionServlet2</servlet-name>
+<servlet-class>com.demo.HttpSessionServlet2</servlet-class>
+</servlet>
+
+
+<servlet-mapping>
+<servlet-name>HttpSessionServlet2</servlet-name>
+<url-pattern>/httpSessionServlet2</url-pattern>
+</servlet-mapping>
 
 
 
