@@ -10,6 +10,7 @@ export class AppComponent {
   
 flag=false;
 name="";
+fullName="ram kumar";
 
 
 //logic part
@@ -26,7 +27,4 @@ fruits:fruit[]=[{name:"mango",cost:"20kg"},
                 {name:"apple",cost:"23kg"},
                 {name:"kiwi",cost:"25kg"}]
 
-
 }
-
-
